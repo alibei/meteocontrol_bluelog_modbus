@@ -1,0 +1,15 @@
+This script can read the remote power control percentage
+from the data logger BlueLog XC and switch relays
+according to that. It runs on the RPI 2/3/4
+
+If the percentage is 100%, all relays are disabled.
+If the percentage is between 99%-60%, relay 1 gets enabled.
+If the percentage is between 59%-30%, relay 2 gets enabled.
+If the percentage is below 30%, relay 3 gets enabled.
+
+Python dependencies:
+- pymodbus
+
+Data logger dependencies:
+- RPC license
+

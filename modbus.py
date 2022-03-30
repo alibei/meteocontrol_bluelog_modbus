@@ -63,5 +63,10 @@ def get_data_payload():
                  GPIO.output(RELAIS_2_GPIO, GPIO.HIGH)
 
 while(True):
-        get_data_payload()
+        try:
+                 get_data_payload()
+                 pass
+        except:
+                 print("Connection failed")
+                 pass
         time.sleep(5)
